@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "clock": 1,
+                "comment": "event sent from customer 1"
+            },
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "clock": 4,
+                "comment": "event sent from customer 1"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "clock": 1,
+                "comment": "event sent from customer 2"
+            },
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "clock": 10,
+                "comment": "event sent from customer 2"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "clock": 1,
+                "comment": "event sent from customer 3"
+            },
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "clock": 17,
+                "comment": "event sent from customer 3"
+            }
+        ]
+    }
+]

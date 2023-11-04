@@ -1,0 +1,25 @@
+// python3 -m grpc_tools.protoc --python_out=. --pyi_out=. --grpc_python_out=. --proto_path=. bank.proto
+
+syntax = "proto3";
+
+service Bank {
+    rpc MsgDelivery(MsgDeliveryRequest) returns (MsgDeliveryResponse) {}
+}
+
+message MsgDeliveryRequest {
+    int32 id = 1;
+    int32 event_id = 2;
+    string interface = 3;
+    int32 money = 4;
+    int32 balance = 5;
+    int32 clock = 6;
+}
+
+message MsgDeliveryResponse{
+    int32 id = 1;
+    int32 event_id = 2;
+    int32 balance = 3;
+    string result = 4;
+    int32 clock = 5;
+
+}
