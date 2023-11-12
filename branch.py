@@ -4,6 +4,7 @@ import json
 import grpc
 import bank_pb2
 import bank_pb2_grpc
+import os
 
 
 class Branch(bank_pb2_grpc.BankServicer):
@@ -11,12 +12,24 @@ class Branch(bank_pb2_grpc.BankServicer):
         self.id = id
         self.balance = balance
         self.branches = branches
+        self.branch_logs = {
+            "id": id,
+            "type": "branch",
+            "events": []
+        }
         self.channelList = list()
         self.stubList = list()
+        self.stubListBranchMapping = list()
         self.recvMsg = list()
         self.clock = 0
 
     def Deposit(self, request):
+        self.branch_logs["events"].append({
+            "customer-request-id": request.event_id,
+            "logical_clock": self.clock,
+            "interface": "deposit",
+            "comment": f"event_recv from customer {request.id}"
+        })
         self.balance += request.money
         if len(self.channelList) == 0:
             for id in self.branches:
@@ -28,10 +41,19 @@ class Branch(bank_pb2_grpc.BankServicer):
                 self.channelList.append(channel)
                 stub = bank_pb2_grpc.BankStub(channel)
                 self.stubList.append(stub)
-        for stub in self.stubList:
+                self.stubListBranchMapping.append(id)
+        for i in range(len(self.stubList)):
+            stub = self.stubList[i]
+            recv_branch = self.stubListBranchMapping[i]
             self.clock += 1
+            self.branch_logs["events"].append({
+                "customer-request-id": request.event_id,
+                "logical_clock": self.clock,
+                "interface": "propogate_deposit",
+                "comment": f"event_sent to branch {recv_branch}"
+            })
             stub.MsgDelivery(
-                bank_pb2.MsgDeliveryRequest(balance=self.balance, interface="propagatedeposit", clock=self.clock))
+                bank_pb2.MsgDeliveryRequest(id=self.id, event_id=request.event_id, balance=self.balance, interface="propagatedeposit", clock=self.clock))
         return {
             "id": self.id,
             "event_id": request.event_id,
@@ -48,6 +70,12 @@ class Branch(bank_pb2_grpc.BankServicer):
         }
 
     def Withdraw(self, request):
+        self.branch_logs["events"].append({
+            "customer-request-id": request.event_id,
+            "logical_clock": self.clock,
+            "interface": "deposit",
+            "comment": f"event_recv from customer {request.id}"
+        })
         status = "fail"
         if self.balance >= request.money:
             status = "success"
@@ -62,10 +90,19 @@ class Branch(bank_pb2_grpc.BankServicer):
                     self.channelList.append(channel)
                     stub = bank_pb2_grpc.BankStub(channel)
                     self.stubList.append(stub)
-            for stub in self.stubList:
+                    self.stubListBranchMapping.append(id)
+            for i in range(len(self.stubList)):
+                stub = self.stubList[i]
+                recv_branch = self.stubListBranchMapping[i]
                 self.clock += 1
+                self.branch_logs["events"].append({
+                    "customer-request-id": request.event_id,
+                    "logical_clock": self.clock,
+                    "interface": "propogate_withdraw",
+                    "comment": f"event_sent to branch {recv_branch}"
+                })
                 stub.MsgDelivery(
-                    bank_pb2.MsgDeliveryRequest(balance=self.balance, interface="propagatewithdraw", clock=self.clock))
+                    bank_pb2.MsgDeliveryRequest(id=self.id, event_id=request.event_id, balance=self.balance, interface="propagatewithdraw", clock=self.clock))
         return {
             "id": self.id,
             "event_id": request.event_id,
@@ -73,12 +110,24 @@ class Branch(bank_pb2_grpc.BankServicer):
         }
 
     def Propagate_Deposit(self, request):
+        self.branch_logs["events"].append({
+            "customer-request-id": request.event_id,
+            "logical_clock": self.clock,
+            "interface": "propogate_deposit",
+            "comment": f"event_recv from bank {request.id}"
+        })
         self.balance = request.balance
         return {
             "result": "success"
         }
 
     def Propagate_Withdraw(self, request):
+        self.branch_logs["events"].append({
+            "customer-request-id": request.event_id,
+            "logical_clock": self.clock,
+            "interface": "propogate_withdraw",
+            "comment": f"event_recv from bank {request.id}"
+        })
         self.balance = request.balance
         return {
             "result": "success"
@@ -101,6 +150,10 @@ class Branch(bank_pb2_grpc.BankServicer):
         event_id = response.get("event_id", None)
         balance = response.get("balance", None)
         result = response.get("result", None)
+        filename = f"branch-{self.id}.json"
+        output_path = os.path.join("output", filename)
+        with open(output_path, 'w') as file:
+            json.dump(self.branch_logs, file, indent=4)
         return bank_pb2.MsgDeliveryResponse(id=id, event_id=event_id, balance=balance, result=result, clock=self.clock)
 
 
