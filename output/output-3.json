@@ -5,7 +5,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 1"
+        "comment": "event_sent from customer 1"
     },
     {
         "id": 1,
@@ -51,7 +51,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 1,
-        "logical_clock": 12,
+        "logical_clock": 9,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 4"
     },
@@ -59,7 +59,7 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 1,
-        "logical_clock": 13,
+        "logical_clock": 10,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 1"
     },
@@ -112,28 +112,12 @@
         "comment": "event_sent to branch 8"
     },
     {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 1,
-        "logical_clock": 18,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 1"
-    },
-    {
         "id": 1,
         "type": "branch",
         "customer-request-id": 1,
         "logical_clock": 19,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 1,
-        "logical_clock": 19,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 1"
     },
     {
         "id": 1,
@@ -144,10 +128,26 @@
         "comment": "event_sent to branch 10"
     },
     {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 1,
+        "logical_clock": 22,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 1"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 1,
+        "logical_clock": 25,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 1"
+    },
+    {
         "id": 9,
         "type": "branch",
         "customer-request-id": 1,
-        "logical_clock": 20,
+        "logical_clock": 30,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 1"
     },
@@ -155,7 +155,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 1,
-        "logical_clock": 21,
+        "logical_clock": 36,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 1"
     },
@@ -165,13 +165,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 1"
+        "comment": "event_sent from customer 1"
     },
     {
         "id": 1,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 21,
+        "logical_clock": 38,
         "interface": "deposit",
         "comment": "event_recv from customer 1"
     },
@@ -179,31 +179,15 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 22,
+        "logical_clock": 39,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 2,
-        "logical_clock": 23,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 3"
     },
     {
         "id": 2,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 23,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 1"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 2,
-        "logical_clock": 27,
+        "logical_clock": 40,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
     },
@@ -211,15 +195,15 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 42,
+        "logical_clock": 44,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 4"
+        "comment": "event_sent to branch 3"
     },
     {
-        "id": 4,
+        "id": 3,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 43,
+        "logical_clock": 45,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
     },
@@ -229,10 +213,18 @@
         "customer-request-id": 2,
         "logical_clock": 46,
         "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 4"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 2,
+        "logical_clock": 47,
+        "interface": "propogate_withdraw",
         "comment": "event_sent to branch 5"
     },
     {
-        "id": 5,
+        "id": 4,
         "type": "branch",
         "customer-request-id": 2,
         "logical_clock": 47,
@@ -243,17 +235,33 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 49,
+        "logical_clock": 48,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 6"
     },
     {
-        "id": 6,
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 2,
+        "logical_clock": 49,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 7"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 2,
+        "logical_clock": 49,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 1"
+    },
+    {
+        "id": 1,
         "type": "branch",
         "customer-request-id": 2,
         "logical_clock": 50,
         "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 1"
+        "comment": "event_sent to branch 8"
     },
     {
         "id": 1,
@@ -261,7 +269,7 @@
         "customer-request-id": 2,
         "logical_clock": 51,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
+        "comment": "event_sent to branch 9"
     },
     {
         "id": 1,
@@ -269,45 +277,37 @@
         "customer-request-id": 2,
         "logical_clock": 52,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
+        "comment": "event_sent to branch 10"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 2,
+        "logical_clock": 58,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 1"
     },
     {
         "id": 7,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 52,
+        "logical_clock": 59,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 2,
-        "logical_clock": 53,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 53,
+        "logical_clock": 62,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 2,
-        "logical_clock": 54,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 10"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 54,
+        "logical_clock": 63,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
     },
@@ -315,7 +315,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 2,
-        "logical_clock": 55,
+        "logical_clock": 66,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 1"
     },
@@ -325,7 +325,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 2"
+        "comment": "event_sent from customer 2"
     },
     {
         "id": 2,
@@ -352,18 +352,18 @@
         "comment": "event_sent to branch 3"
     },
     {
-        "id": 3,
+        "id": 1,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 8,
+        "logical_clock": 7,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
     {
-        "id": 1,
+        "id": 3,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 9,
+        "logical_clock": 8,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
@@ -376,20 +376,20 @@
         "comment": "event_sent to branch 4"
     },
     {
-        "id": 2,
+        "id": 4,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 14,
+        "logical_clock": 13,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 5"
+        "comment": "event_recv from bank 2"
     },
     {
-        "id": 4,
+        "id": 2,
         "type": "branch",
         "customer-request-id": 3,
         "logical_clock": 15,
         "interface": "propogate_deposit",
-        "comment": "event_recv from bank 2"
+        "comment": "event_sent to branch 5"
     },
     {
         "id": 2,
@@ -416,28 +416,20 @@
         "comment": "event_sent to branch 8"
     },
     {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 3,
-        "logical_clock": 18,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 2"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 3,
-        "logical_clock": 18,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 2"
-    },
-    {
         "id": 2,
         "type": "branch",
         "customer-request-id": 3,
         "logical_clock": 19,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 3,
+        "logical_clock": 19,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 2"
     },
     {
         "id": 2,
@@ -448,10 +440,18 @@
         "comment": "event_sent to branch 10"
     },
     {
-        "id": 7,
+        "id": 6,
         "type": "branch",
         "customer-request-id": 3,
         "logical_clock": 20,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 2"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 3,
+        "logical_clock": 25,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
@@ -459,7 +459,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 20,
+        "logical_clock": 27,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
@@ -467,7 +467,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 21,
+        "logical_clock": 31,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
@@ -475,7 +475,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 3,
-        "logical_clock": 33,
+        "logical_clock": 35,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 2"
     },
@@ -485,13 +485,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 2"
+        "comment": "event_sent from customer 2"
     },
     {
         "id": 2,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 24,
+        "logical_clock": 38,
         "interface": "deposit",
         "comment": "event_recv from customer 2"
     },
@@ -499,31 +499,15 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 25,
+        "logical_clock": 39,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 4,
-        "logical_clock": 26,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 3"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 4,
-        "logical_clock": 28,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 2"
     },
     {
         "id": 1,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 35,
+        "logical_clock": 42,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 2"
     },
@@ -531,15 +515,23 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 36,
+        "logical_clock": 44,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 3"
+    },
+    {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 4,
+        "logical_clock": 47,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 4"
     },
     {
-        "id": 4,
+        "id": 3,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 45,
+        "logical_clock": 47,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 2"
     },
@@ -552,12 +544,20 @@
         "comment": "event_sent to branch 5"
     },
     {
-        "id": 5,
+        "id": 2,
         "type": "branch",
         "customer-request-id": 4,
         "logical_clock": 49,
         "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 2"
+        "comment": "event_sent to branch 6"
+    },
+    {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 4,
+        "logical_clock": 50,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 7"
     },
     {
         "id": 2,
@@ -565,10 +565,18 @@
         "customer-request-id": 4,
         "logical_clock": 51,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 6"
+        "comment": "event_sent to branch 8"
     },
     {
-        "id": 6,
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 4,
+        "logical_clock": 52,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 5,
         "type": "branch",
         "customer-request-id": 4,
         "logical_clock": 52,
@@ -579,20 +587,12 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 54,
+        "logical_clock": 53,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
+        "comment": "event_sent to branch 10"
     },
     {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 4,
-        "logical_clock": 55,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 7,
+        "id": 4,
         "type": "branch",
         "customer-request-id": 4,
         "logical_clock": 55,
@@ -600,26 +600,26 @@
         "comment": "event_recv from bank 2"
     },
     {
-        "id": 2,
+        "id": 6,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 56,
+        "logical_clock": 62,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
+        "comment": "event_recv from bank 2"
     },
     {
-        "id": 2,
+        "id": 7,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 57,
+        "logical_clock": 63,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 10"
+        "comment": "event_recv from bank 2"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 57,
+        "logical_clock": 68,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 2"
     },
@@ -627,7 +627,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 60,
+        "logical_clock": 69,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 2"
     },
@@ -635,7 +635,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 4,
-        "logical_clock": 65,
+        "logical_clock": 73,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 2"
     },
@@ -645,7 +645,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 3"
+        "comment": "event_sent from customer 3"
     },
     {
         "id": 3,
@@ -664,26 +664,26 @@
         "comment": "event_sent to branch 1"
     },
     {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 7,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 3"
-    },
-    {
         "id": 3,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 7,
+        "logical_clock": 4,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 2"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 6,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 3"
     },
     {
         "id": 2,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 8,
+        "logical_clock": 7,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 3"
     },
@@ -691,12 +691,44 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 9,
+        "logical_clock": 7,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 4"
     },
     {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 10,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 5"
+    },
+    {
         "id": 4,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 11,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 11,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 15,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 6"
+    },
+    {
+        "id": 6,
         "type": "branch",
         "customer-request-id": 5,
         "logical_clock": 16,
@@ -707,15 +739,23 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 17,
+        "logical_clock": 20,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 5"
+        "comment": "event_sent to branch 7"
     },
     {
-        "id": 5,
+        "id": 3,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 20,
+        "logical_clock": 21,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 21,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 3"
     },
@@ -725,69 +765,29 @@
         "customer-request-id": 5,
         "logical_clock": 22,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 6"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 23,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 23,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 3"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 24,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 25,
-        "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 26,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 10"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 5,
-        "logical_clock": 26,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 3"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 34,
+        "logical_clock": 22,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 5,
+        "logical_clock": 23,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 10"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 36,
+        "logical_clock": 24,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 3"
     },
@@ -795,7 +795,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 5,
-        "logical_clock": 38,
+        "logical_clock": 30,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 3"
     },
@@ -805,13 +805,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 3"
+        "comment": "event_sent from customer 3"
     },
     {
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 37,
+        "logical_clock": 24,
         "interface": "deposit",
         "comment": "event_recv from customer 3"
     },
@@ -819,7 +819,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 38,
+        "logical_clock": 25,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -827,39 +827,15 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 39,
+        "logical_clock": 26,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 6,
-        "logical_clock": 48,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 3"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 6,
-        "logical_clock": 51,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 4"
     },
     {
         "id": 2,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 52,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 3"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 6,
-        "logical_clock": 52,
+        "logical_clock": 27,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -867,7 +843,31 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 56,
+        "logical_clock": 27,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 6,
+        "logical_clock": 29,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 6,
+        "logical_clock": 32,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 6,
+        "logical_clock": 42,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 5"
     },
@@ -875,23 +875,15 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 57,
+        "logical_clock": 43,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 6"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 6,
-        "logical_clock": 58,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
     },
     {
         "id": 5,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 58,
+        "logical_clock": 43,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -899,7 +891,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 58,
+        "logical_clock": 44,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -907,23 +899,15 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 59,
+        "logical_clock": 50,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 6,
-        "logical_clock": 60,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
+        "comment": "event_sent to branch 7"
     },
     {
         "id": 7,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 60,
+        "logical_clock": 51,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -931,23 +915,39 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 61,
+        "logical_clock": 52,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 10"
+        "comment": "event_sent to branch 8"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 66,
+        "logical_clock": 53,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 6,
+        "logical_clock": 54,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 6,
+        "logical_clock": 55,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 10"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 68,
+        "logical_clock": 55,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -955,7 +955,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 6,
-        "logical_clock": 72,
+        "logical_clock": 61,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 3"
     },
@@ -965,7 +965,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 4"
+        "comment": "event_sent from customer 4"
     },
     {
         "id": 4,
@@ -995,7 +995,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 6,
+        "logical_clock": 8,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1003,7 +1003,7 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 7,
+        "logical_clock": 8,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1011,7 +1011,7 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 14,
+        "logical_clock": 12,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 3"
     },
@@ -1019,7 +1019,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 15,
+        "logical_clock": 13,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1027,15 +1027,31 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 17,
+        "logical_clock": 15,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 5"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 7,
+        "logical_clock": 16,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 6"
     },
     {
         "id": 5,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 19,
+        "logical_clock": 17,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 7,
+        "logical_clock": 18,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1045,13 +1061,21 @@
         "customer-request-id": 7,
         "logical_clock": 20,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 6"
+        "comment": "event_sent to branch 7"
     },
     {
-        "id": 6,
+        "id": 4,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 21,
+        "logical_clock": 23,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 7,
+        "logical_clock": 23,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1061,53 +1085,29 @@
         "customer-request-id": 7,
         "logical_clock": 24,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 7,
-        "logical_clock": 25,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 7,
-        "logical_clock": 26,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 7,
-        "logical_clock": 27,
-        "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 7,
-        "logical_clock": 28,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 10"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 28,
+        "logical_clock": 24,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 7,
+        "logical_clock": 25,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 10"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 32,
+        "logical_clock": 26,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1115,7 +1115,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 7,
-        "logical_clock": 35,
+        "logical_clock": 32,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 4"
     },
@@ -1125,13 +1125,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 4"
+        "comment": "event_sent from customer 4"
     },
     {
         "id": 4,
         "type": "branch",
         "customer-request-id": 8,
-        "logical_clock": 29,
+        "logical_clock": 26,
         "interface": "deposit",
         "comment": "event_recv from customer 4"
     },
@@ -1139,15 +1139,39 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 8,
-        "logical_clock": 30,
+        "logical_clock": 27,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 28,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 2"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 35,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 3"
     },
     {
         "id": 1,
         "type": "branch",
         "customer-request-id": 8,
-        "logical_clock": 43,
+        "logical_clock": 37,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 41,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 4"
     },
@@ -1155,6 +1179,302 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 8,
+        "logical_clock": 43,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 5"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 46,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 48,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 56,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 6"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 57,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 7"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 57,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 58,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 60,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 61,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 61,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 62,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 10"
+    },
+    {
+        "id": 9,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 62,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 8,
+        "logical_clock": 63,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 4"
+    },
+    {
+        "id": 5,
+        "customer-request-id": 9,
+        "type": "customer",
+        "logical_clock": 1,
+        "interface": "deposit",
+        "comment": "event_sent from customer 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 2,
+        "interface": "deposit",
+        "comment": "event_recv from customer 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 3,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 1"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 4,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 2"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 10,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 12,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 3"
+    },
+    {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 13,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 19,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 21,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 22,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 24,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 6"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 26,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 7"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 26,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 27,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 28,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 29,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 10"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 29,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 31,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 9,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 33,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 9,
+        "logical_clock": 39,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "customer-request-id": 10,
+        "type": "customer",
+        "logical_clock": 2,
+        "interface": "withdraw",
+        "comment": "event_sent from customer 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 30,
+        "interface": "deposit",
+        "comment": "event_recv from customer 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 31,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 1"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 43,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
         "logical_clock": 44,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
@@ -1162,362 +1482,66 @@
     {
         "id": 2,
         "type": "branch",
-        "customer-request-id": 8,
+        "customer-request-id": 10,
         "logical_clock": 45,
         "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
+        "comment": "event_recv from bank 5"
     },
     {
-        "id": 4,
+        "id": 5,
         "type": "branch",
-        "customer-request-id": 8,
+        "customer-request-id": 10,
         "logical_clock": 46,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
     },
     {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 50,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 4"
+    },
+    {
         "id": 3,
         "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 47,
+        "customer-request-id": 10,
+        "logical_clock": 51,
         "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
+        "comment": "event_recv from bank 5"
     },
     {
-        "id": 4,
+        "id": 5,
         "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 48,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 5"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 50,
+        "customer-request-id": 10,
+        "logical_clock": 56,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 6"
     },
     {
         "id": 5,
         "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 53,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 54,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 56,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 57,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 8,
+        "customer-request-id": 10,
         "logical_clock": 58,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 59,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 59,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 60,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 10"
-    },
-    {
-        "id": 9,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 61,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 8,
-        "logical_clock": 66,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 4"
-    },
-    {
-        "id": 5,
-        "customer-request-id": 9,
-        "type": "customer",
-        "logical_clock": 1,
-        "interface": "deposit",
-        "comment": "event sent from customer 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 2,
-        "interface": "deposit",
-        "comment": "event_recv from customer 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 3,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 1"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 4,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 2"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 5,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 3"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 11,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 11,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 17,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 4"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 19,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 20,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 21,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 24,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 26,
-        "interface": "propogate_deposit",
         "comment": "event_sent to branch 7"
     },
     {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 28,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 28,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 29,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 30,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 10"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 32,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 9,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 37,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 9,
-        "logical_clock": 39,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "customer-request-id": 10,
-        "type": "customer",
-        "logical_clock": 2,
-        "interface": "withdraw",
-        "comment": "event sent from customer 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 31,
-        "interface": "deposit",
-        "comment": "event_recv from customer 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 32,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 1"
-    },
-    {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 50,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 50,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 2"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 53,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 54,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 3"
-    },
-    {
-        "id": 3,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 55,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 56,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 4"
-    },
-    {
         "id": 4,
         "type": "branch",
         "customer-request-id": 10,
-        "logical_clock": 57,
+        "logical_clock": 59,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 59,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 8"
     },
     {
         "id": 5,
@@ -1525,7 +1549,15 @@
         "customer-request-id": 10,
         "logical_clock": 60,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 6"
+        "comment": "event_sent to branch 9"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 10,
+        "logical_clock": 61,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 10"
     },
     {
         "id": 6,
@@ -1536,44 +1568,12 @@
         "comment": "event_recv from bank 5"
     },
     {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 62,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 63,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
-    },
-    {
         "id": 7,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 63,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 5"
-    },
-    {
-        "id": 5,
         "type": "branch",
         "customer-request-id": 10,
         "logical_clock": 64,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 10,
-        "logical_clock": 65,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 10"
+        "comment": "event_recv from bank 5"
     },
     {
         "id": 8,
@@ -1587,7 +1587,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 10,
-        "logical_clock": 69,
+        "logical_clock": 70,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 5"
     },
@@ -1595,7 +1595,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 10,
-        "logical_clock": 73,
+        "logical_clock": 74,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 5"
     },
@@ -1605,7 +1605,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 6"
+        "comment": "event_sent from customer 6"
     },
     {
         "id": 6,
@@ -1624,6 +1624,14 @@
         "comment": "event_sent to branch 1"
     },
     {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 4,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 6"
+    },
+    {
         "id": 6,
         "type": "branch",
         "customer-request-id": 11,
@@ -1640,6 +1648,14 @@
         "comment": "event_sent to branch 3"
     },
     {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 6,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 6"
+    },
+    {
         "id": 6,
         "type": "branch",
         "customer-request-id": 11,
@@ -1648,23 +1664,47 @@
         "comment": "event_sent to branch 4"
     },
     {
-        "id": 1,
+        "id": 6,
         "type": "branch",
         "customer-request-id": 11,
-        "logical_clock": 13,
+        "logical_clock": 7,
         "interface": "propogate_deposit",
-        "comment": "event_recv from bank 6"
+        "comment": "event_sent to branch 5"
     },
     {
-        "id": 2,
+        "id": 6,
         "type": "branch",
         "customer-request-id": 11,
-        "logical_clock": 13,
+        "logical_clock": 8,
         "interface": "propogate_deposit",
-        "comment": "event_recv from bank 6"
+        "comment": "event_sent to branch 7"
     },
     {
         "id": 3,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 9,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 9,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 14,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 5,
         "type": "branch",
         "customer-request-id": 11,
         "logical_clock": 18,
@@ -1677,13 +1717,13 @@
         "customer-request-id": 11,
         "logical_clock": 19,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 5"
+        "comment": "event_sent to branch 8"
     },
     {
-        "id": 4,
+        "id": 8,
         "type": "branch",
         "customer-request-id": 11,
-        "logical_clock": 21,
+        "logical_clock": 20,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 6"
     },
@@ -1693,69 +1733,29 @@
         "customer-request-id": 11,
         "logical_clock": 22,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 23,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 23,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 26,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 27,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 30,
-        "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 11,
-        "logical_clock": 31,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 10"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 11,
-        "logical_clock": 31,
+        "logical_clock": 23,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 11,
+        "logical_clock": 27,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 10"
     },
     {
         "id": 10,
         "type": "branch",
         "customer-request-id": 11,
-        "logical_clock": 32,
+        "logical_clock": 28,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 6"
     },
@@ -1765,13 +1765,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 6"
+        "comment": "event_sent from customer 6"
     },
     {
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 32,
+        "logical_clock": 29,
         "interface": "deposit",
         "comment": "event_recv from customer 6"
     },
@@ -1779,7 +1779,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 33,
+        "logical_clock": 30,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -1787,7 +1787,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 34,
+        "logical_clock": 31,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 6"
     },
@@ -1795,7 +1795,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 34,
+        "logical_clock": 31,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
     },
@@ -1803,7 +1803,7 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 35,
+        "logical_clock": 32,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 6"
     },
@@ -1811,7 +1811,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 35,
+        "logical_clock": 32,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
     },
@@ -1819,7 +1819,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 36,
+        "logical_clock": 33,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 6"
     },
@@ -1827,12 +1827,52 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 36,
+        "logical_clock": 33,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 4"
     },
     {
         "id": 4,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 34,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 34,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 45,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 45,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 7"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 46,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 8,
         "type": "branch",
         "customer-request-id": 12,
         "logical_clock": 47,
@@ -1843,12 +1883,20 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 51,
+        "logical_clock": 48,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 5"
+        "comment": "event_sent to branch 9"
     },
     {
-        "id": 5,
+        "id": 9,
+        "type": "branch",
+        "customer-request-id": 12,
+        "logical_clock": 49,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 6"
+    },
+    {
+        "id": 7,
         "type": "branch",
         "customer-request-id": 12,
         "logical_clock": 52,
@@ -1859,55 +1907,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 53,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 54,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 55,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 56,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 57,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 9"
-    },
-    {
-        "id": 9,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 58,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 6"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 12,
-        "logical_clock": 62,
+        "logical_clock": 59,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 10"
     },
@@ -1915,7 +1915,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 12,
-        "logical_clock": 63,
+        "logical_clock": 60,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 6"
     },
@@ -1925,7 +1925,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 7"
+        "comment": "event_sent from customer 7"
     },
     {
         "id": 7,
@@ -1968,10 +1968,18 @@
         "comment": "event_sent to branch 4"
     },
     {
-        "id": 1,
+        "id": 7,
         "type": "branch",
         "customer-request-id": 13,
         "logical_clock": 10,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 5"
+    },
+    {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 13,
+        "logical_clock": 14,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
@@ -1979,7 +1987,7 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 12,
+        "logical_clock": 14,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
@@ -1987,20 +1995,20 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 13,
+        "logical_clock": 17,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 7"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 13,
         "logical_clock": 19,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
     {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 13,
-        "logical_clock": 19,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 5"
-    },
-    {
-        "id": 4,
+        "id": 5,
         "type": "branch",
         "customer-request-id": 13,
         "logical_clock": 23,
@@ -2016,7 +2024,7 @@
         "comment": "event_sent to branch 6"
     },
     {
-        "id": 5,
+        "id": 6,
         "type": "branch",
         "customer-request-id": 13,
         "logical_clock": 25,
@@ -2024,18 +2032,10 @@
         "comment": "event_recv from bank 7"
     },
     {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 13,
-        "logical_clock": 28,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 7"
-    },
-    {
         "id": 7,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 29,
+        "logical_clock": 27,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 8"
     },
@@ -2043,7 +2043,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 30,
+        "logical_clock": 29,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
@@ -2051,7 +2051,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 32,
+        "logical_clock": 30,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
     },
@@ -2059,7 +2059,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 33,
+        "logical_clock": 32,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 10"
     },
@@ -2067,7 +2067,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 35,
+        "logical_clock": 32,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
@@ -2075,7 +2075,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 13,
-        "logical_clock": 40,
+        "logical_clock": 37,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 7"
     },
@@ -2085,13 +2085,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 7"
+        "comment": "event_sent from customer 7"
     },
     {
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 34,
+        "logical_clock": 33,
         "interface": "deposit",
         "comment": "event_recv from customer 7"
     },
@@ -2099,7 +2099,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 35,
+        "logical_clock": 34,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -2107,7 +2107,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 36,
+        "logical_clock": 35,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
     },
@@ -2115,7 +2115,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 37,
+        "logical_clock": 36,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
     },
@@ -2123,7 +2123,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 47,
+        "logical_clock": 41,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 7"
     },
@@ -2131,7 +2131,7 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 50,
+        "logical_clock": 43,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 7"
     },
@@ -2139,7 +2139,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 50,
+        "logical_clock": 49,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 7"
     },
@@ -2163,31 +2163,15 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 56,
+        "logical_clock": 54,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 5"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 14,
-        "logical_clock": 59,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 6"
     },
     {
         "id": 5,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 61,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 7"
-    },
-    {
-        "id": 6,
-        "type": "branch",
-        "customer-request-id": 14,
-        "logical_clock": 64,
+        "logical_clock": 55,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 7"
     },
@@ -2195,9 +2179,25 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 64,
+        "logical_clock": 61,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 6"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 14,
+        "logical_clock": 62,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 8"
+    },
+    {
+        "id": 6,
+        "type": "branch",
+        "customer-request-id": 14,
+        "logical_clock": 63,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 7"
     },
     {
         "id": 8,
@@ -2219,7 +2219,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 67,
+        "logical_clock": 68,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 10"
     },
@@ -2227,7 +2227,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 14,
-        "logical_clock": 67,
+        "logical_clock": 68,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 7"
     },
@@ -2245,7 +2245,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 8"
+        "comment": "event_sent from customer 8"
     },
     {
         "id": 8,
@@ -2296,26 +2296,18 @@
         "comment": "event_sent to branch 5"
     },
     {
-        "id": 1,
+        "id": 2,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 8,
+        "logical_clock": 11,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 8"
     },
     {
-        "id": 8,
+        "id": 1,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 8,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 6"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 15,
-        "logical_clock": 10,
+        "logical_clock": 12,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 8"
     },
@@ -2328,15 +2320,23 @@
         "comment": "event_recv from bank 8"
     },
     {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 15,
+        "logical_clock": 18,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 8"
+    },
+    {
         "id": 8,
         "type": "branch",
         "customer-request-id": 15,
         "logical_clock": 21,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 7"
+        "comment": "event_sent to branch 6"
     },
     {
-        "id": 4,
+        "id": 5,
         "type": "branch",
         "customer-request-id": 15,
         "logical_clock": 22,
@@ -2344,26 +2344,10 @@
         "comment": "event_recv from bank 8"
     },
     {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 15,
-        "logical_clock": 24,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 8"
-    },
-    {
         "id": 6,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 27,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 8"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 15,
-        "logical_clock": 30,
+        "logical_clock": 23,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 8"
     },
@@ -2371,7 +2355,23 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 31,
+        "logical_clock": 23,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 7"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 15,
+        "logical_clock": 28,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 8"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 15,
+        "logical_clock": 28,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 9"
     },
@@ -2379,7 +2379,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 34,
+        "logical_clock": 29,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 8"
     },
@@ -2387,7 +2387,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 36,
+        "logical_clock": 30,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 10"
     },
@@ -2395,7 +2395,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 15,
-        "logical_clock": 37,
+        "logical_clock": 34,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 8"
     },
@@ -2405,13 +2405,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 8"
+        "comment": "event_sent from customer 8"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 37,
+        "logical_clock": 35,
         "interface": "deposit",
         "comment": "event_recv from customer 8"
     },
@@ -2419,7 +2419,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 38,
+        "logical_clock": 36,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -2427,7 +2427,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 39,
+        "logical_clock": 37,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
     },
@@ -2435,7 +2435,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 40,
+        "logical_clock": 38,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
     },
@@ -2443,7 +2443,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 41,
+        "logical_clock": 39,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 4"
     },
@@ -2451,7 +2451,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 44,
+        "logical_clock": 40,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2459,7 +2459,7 @@
         "id": 2,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 49,
+        "logical_clock": 42,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2467,7 +2467,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 49,
+        "logical_clock": 48,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2475,7 +2475,23 @@
         "id": 4,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 53,
+        "logical_clock": 48,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 8"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 16,
+        "logical_clock": 48,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 5"
+    },
+    {
+        "id": 5,
+        "type": "branch",
+        "customer-request-id": 16,
+        "logical_clock": 51,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2485,29 +2501,13 @@
         "customer-request-id": 16,
         "logical_clock": 54,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 5"
-    },
-    {
-        "id": 5,
-        "type": "branch",
-        "customer-request-id": 16,
-        "logical_clock": 57,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 8"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 16,
-        "logical_clock": 58,
-        "interface": "propogate_withdraw",
         "comment": "event_sent to branch 6"
     },
     {
         "id": 6,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 59,
+        "logical_clock": 60,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2515,7 +2515,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 60,
+        "logical_clock": 64,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 7"
     },
@@ -2523,7 +2523,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 61,
+        "logical_clock": 65,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2531,7 +2531,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 62,
+        "logical_clock": 66,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 9"
     },
@@ -2539,7 +2539,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 63,
+        "logical_clock": 67,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2547,7 +2547,7 @@
         "id": 8,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 68,
+        "logical_clock": 69,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 10"
     },
@@ -2555,7 +2555,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 16,
-        "logical_clock": 69,
+        "logical_clock": 70,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 8"
     },
@@ -2565,7 +2565,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 9"
+        "comment": "event_sent from customer 9"
     },
     {
         "id": 9,
@@ -2584,14 +2584,6 @@
         "comment": "event_sent to branch 1"
     },
     {
-        "id": 1,
-        "type": "branch",
-        "customer-request-id": 17,
-        "logical_clock": 4,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 9"
-    },
-    {
         "id": 9,
         "type": "branch",
         "customer-request-id": 17,
@@ -2606,14 +2598,6 @@
         "logical_clock": 5,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 3"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 17,
-        "logical_clock": 6,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 9"
     },
     {
         "id": 9,
@@ -2648,7 +2632,7 @@
         "comment": "event_sent to branch 7"
     },
     {
-        "id": 3,
+        "id": 2,
         "type": "branch",
         "customer-request-id": 17,
         "logical_clock": 10,
@@ -2664,10 +2648,26 @@
         "comment": "event_sent to branch 8"
     },
     {
+        "id": 1,
+        "type": "branch",
+        "customer-request-id": 17,
+        "logical_clock": 11,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 9"
+    },
+    {
+        "id": 3,
+        "type": "branch",
+        "customer-request-id": 17,
+        "logical_clock": 14,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 9"
+    },
+    {
         "id": 4,
         "type": "branch",
         "customer-request-id": 17,
-        "logical_clock": 18,
+        "logical_clock": 17,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 9"
     },
@@ -2675,7 +2675,7 @@
         "id": 5,
         "type": "branch",
         "customer-request-id": 17,
-        "logical_clock": 22,
+        "logical_clock": 20,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 9"
     },
@@ -2683,23 +2683,7 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 17,
-        "logical_clock": 25,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 9"
-    },
-    {
-        "id": 7,
-        "type": "branch",
-        "customer-request-id": 17,
-        "logical_clock": 27,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 9"
-    },
-    {
-        "id": 8,
-        "type": "branch",
-        "customer-request-id": 17,
-        "logical_clock": 33,
+        "logical_clock": 21,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 9"
     },
@@ -2707,15 +2691,31 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 17,
-        "logical_clock": 33,
+        "logical_clock": 25,
         "interface": "propogate_deposit",
         "comment": "event_sent to branch 10"
+    },
+    {
+        "id": 7,
+        "type": "branch",
+        "customer-request-id": 17,
+        "logical_clock": 26,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 9"
+    },
+    {
+        "id": 8,
+        "type": "branch",
+        "customer-request-id": 17,
+        "logical_clock": 26,
+        "interface": "propogate_deposit",
+        "comment": "event_recv from bank 9"
     },
     {
         "id": 10,
         "type": "branch",
         "customer-request-id": 17,
-        "logical_clock": 34,
+        "logical_clock": 31,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 9"
     },
@@ -2725,13 +2725,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 9"
+        "comment": "event_sent from customer 9"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 39,
+        "logical_clock": 34,
         "interface": "deposit",
         "comment": "event_recv from customer 9"
     },
@@ -2739,7 +2739,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 40,
+        "logical_clock": 35,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -2747,7 +2747,7 @@
         "id": 1,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 41,
+        "logical_clock": 36,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
     },
@@ -2755,15 +2755,23 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 41,
+        "logical_clock": 36,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
+    },
+    {
+        "id": 2,
+        "type": "branch",
+        "customer-request-id": 18,
+        "logical_clock": 37,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 9"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 42,
+        "logical_clock": 40,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
     },
@@ -2771,7 +2779,7 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 43,
+        "logical_clock": 41,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
     },
@@ -2779,15 +2787,23 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 43,
+        "logical_clock": 41,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 4"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 18,
+        "logical_clock": 42,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 9"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 44,
+        "logical_clock": 42,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 5"
     },
@@ -2795,71 +2811,55 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 45,
+        "logical_clock": 43,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 6"
     },
     {
-        "id": 2,
+        "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 46,
+        "logical_clock": 44,
         "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 9"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 18,
-        "logical_clock": 49,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 9"
+        "comment": "event_sent to branch 7"
     },
     {
         "id": 5,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 55,
+        "logical_clock": 47,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
-    },
-    {
-        "id": 9,
-        "type": "branch",
-        "customer-request-id": 18,
-        "logical_clock": 55,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 7"
     },
     {
         "id": 6,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 56,
+        "logical_clock": 47,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
+    },
+    {
+        "id": 9,
+        "type": "branch",
+        "customer-request-id": 18,
+        "logical_clock": 56,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 8"
     },
     {
         "id": 7,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 58,
+        "logical_clock": 60,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
-    },
-    {
-        "id": 9,
-        "type": "branch",
-        "customer-request-id": 18,
-        "logical_clock": 59,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 8"
     },
     {
         "id": 8,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 61,
+        "logical_clock": 63,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
     },
@@ -2867,7 +2867,7 @@
         "id": 9,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 62,
+        "logical_clock": 64,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 10"
     },
@@ -2875,7 +2875,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 18,
-        "logical_clock": 67,
+        "logical_clock": 65,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 9"
     },
@@ -2885,7 +2885,7 @@
         "type": "customer",
         "logical_clock": 1,
         "interface": "deposit",
-        "comment": "event sent from customer 10"
+        "comment": "event_sent from customer 10"
     },
     {
         "id": 10,
@@ -2944,34 +2944,18 @@
         "comment": "event_sent to branch 6"
     },
     {
-        "id": 10,
+        "id": 2,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 9,
+        "logical_clock": 12,
         "interface": "propogate_deposit",
-        "comment": "event_sent to branch 7"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 19,
-        "logical_clock": 10,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 8"
+        "comment": "event_recv from bank 10"
     },
     {
         "id": 1,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 14,
-        "interface": "propogate_deposit",
-        "comment": "event_recv from bank 10"
-    },
-    {
-        "id": 2,
-        "type": "branch",
-        "customer-request-id": 19,
-        "logical_clock": 15,
+        "logical_clock": 13,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
     },
@@ -2979,23 +2963,15 @@
         "id": 3,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 21,
+        "logical_clock": 18,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 19,
-        "logical_clock": 22,
-        "interface": "propogate_deposit",
-        "comment": "event_sent to branch 9"
     },
     {
         "id": 4,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 25,
+        "logical_clock": 21,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
     },
@@ -3003,7 +2979,7 @@
         "id": 5,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 27,
+        "logical_clock": 25,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
     },
@@ -3011,9 +2987,17 @@
         "id": 6,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 29,
+        "logical_clock": 28,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 19,
+        "logical_clock": 29,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 7"
     },
     {
         "id": 7,
@@ -3024,18 +3008,34 @@
         "comment": "event_recv from bank 10"
     },
     {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 19,
+        "logical_clock": 33,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 8"
+    },
+    {
         "id": 8,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 35,
+        "logical_clock": 34,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 19,
+        "logical_clock": 38,
+        "interface": "propogate_deposit",
+        "comment": "event_sent to branch 9"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 19,
-        "logical_clock": 38,
+        "logical_clock": 39,
         "interface": "propogate_deposit",
         "comment": "event_recv from bank 10"
     },
@@ -3045,13 +3045,13 @@
         "type": "customer",
         "logical_clock": 2,
         "interface": "withdraw",
-        "comment": "event sent from customer 10"
+        "comment": "event_sent from customer 10"
     },
     {
         "id": 10,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 41,
+        "logical_clock": 40,
         "interface": "deposit",
         "comment": "event_recv from customer 10"
     },
@@ -3059,7 +3059,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 42,
+        "logical_clock": 41,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 1"
     },
@@ -3067,7 +3067,7 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 43,
+        "logical_clock": 42,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 2"
     },
@@ -3075,9 +3075,17 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 44,
+        "logical_clock": 43,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 3"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 20,
+        "logical_clock": 44,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 4"
     },
     {
         "id": 1,
@@ -3093,45 +3101,21 @@
         "customer-request-id": 20,
         "logical_clock": 45,
         "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 4"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 20,
-        "logical_clock": 46,
-        "interface": "propogate_withdraw",
         "comment": "event_sent to branch 5"
     },
     {
         "id": 2,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 47,
+        "logical_clock": 46,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
-    },
-    {
-        "id": 10,
-        "type": "branch",
-        "customer-request-id": 20,
-        "logical_clock": 47,
-        "interface": "propogate_withdraw",
-        "comment": "event_sent to branch 6"
     },
     {
         "id": 3,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 48,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 10"
-    },
-    {
-        "id": 4,
-        "type": "branch",
-        "customer-request-id": 20,
-        "logical_clock": 55,
+        "logical_clock": 53,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
     },
@@ -3139,15 +3123,31 @@
         "id": 5,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 59,
+        "logical_clock": 57,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
+    },
+    {
+        "id": 4,
+        "type": "branch",
+        "customer-request-id": 20,
+        "logical_clock": 58,
+        "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 10"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 20,
+        "logical_clock": 62,
+        "interface": "propogate_withdraw",
+        "comment": "event_sent to branch 6"
     },
     {
         "id": 6,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 63,
+        "logical_clock": 64,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
     },
@@ -3163,7 +3163,7 @@
         "id": 7,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 65,
+        "logical_clock": 67,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
     },
@@ -3171,31 +3171,31 @@
         "id": 10,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 68,
+        "logical_clock": 67,
         "interface": "propogate_withdraw",
         "comment": "event_sent to branch 8"
     },
     {
         "id": 8,
-        "type": "branch",
-        "customer-request-id": 20,
-        "logical_clock": 69,
-        "interface": "propogate_withdraw",
-        "comment": "event_recv from bank 10"
-    },
-    {
-        "id": 10,
         "type": "branch",
         "customer-request-id": 20,
         "logical_clock": 70,
         "interface": "propogate_withdraw",
+        "comment": "event_recv from bank 10"
+    },
+    {
+        "id": 10,
+        "type": "branch",
+        "customer-request-id": 20,
+        "logical_clock": 72,
+        "interface": "propogate_withdraw",
         "comment": "event_sent to branch 9"
     },
     {
         "id": 9,
         "type": "branch",
         "customer-request-id": 20,
-        "logical_clock": 71,
+        "logical_clock": 73,
         "interface": "propogate_withdraw",
         "comment": "event_recv from bank 10"
     }
